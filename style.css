@@ -1,0 +1,317 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a012a; /* Fundo roxo escuro */
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+    
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(58, 0, 92, 0.9); /* Roxo translúcido */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #dba6ff; /* Lilás */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Hero */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Imagem de perfil */
+.perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #dba6ff; /* Lilás neon */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+    transform: scale(1.1);
+}
+
+/* Projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projeto {
+    background-color: rgba(90, 0, 140, 0.8); /* Roxo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+    background-color: rgba(199, 119, 233, 0.9); /* Roxo mais claro */
+}
+
+/* Botões */
+.btn {
+    background-color: #dba6ff; /* Lilás */
+    color: #1a012a;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+/* Fundo dinâmico */
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .projetos-container {
+        flex-direction: column;
+    }
+
+    .projeto {
+        width: 100%;
+    }
+}
+
+/* Redes Sociais */
+#redes {
+    padding: 50px;
+    text-align: center;
+}
+
+.redes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.rede {
+    font-size: 40px;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rede:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Cores para cada rede */
+.github { color: #fff; }
+.github:hover { background-color: #333; }
+
+.linkedin { color: #0077b5; }
+.linkedin:hover { background-color: #004471; }
+
+.replit { color: #ff4500; }
+.replit:hover { background-color: #a33100; }
+
+.instagram { color: #e1306c; }
+.instagram:hover { background-color: #6a0035; }
+
+/* Seções centralizadas */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Botão de alternância de tema */
+#toggle-mode {
+    background-color: #dba6ff;
+    color: #1a012a;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#toggle-mode:hover {
+    background-color: #fff;
+}
+
+/* Estilos para o modo claro */
+.light-mode {
+    background-color: #f5e1ff; /* Lilás claro */
+    color: #1a012a;
+}
+
+.light-mode header {
+    background-color: #fff;
+}
+
+.light-mode #toggle-mode {
+    background-color: #1a012a;
+    color: #fff;
+}
+
+.light-mode #toggle-mode:hover {
+    background-color: #6c008c;
+}
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none; /* Garante que o usuário possa clicar nos botões normalmente */
+}
+#Objetivos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centraliza verticalmente */
+    align-items: center;      /* Centraliza horizontalmente */
+    text-align: center;       /* Garante que o texto fique alinhado no centro */      
+    padding: 20px;            /* Adiciona espaçamento interno */
+    margin: 0 auto;           /* Centraliza a seção na tela */
+    max-width: 40%;           /* Define um limite de largura para melhor leitura */
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centraliza verticalmente */
+    align-items: center;      /* Centraliza horizontalmente */
+    text-align: center;       /* Texto alinhado ao centro */
+    padding: 20px;            /* Espaçamento interno */
+    margin: 0 auto;           /* Centraliza a seção */
+    max-width: 40%;           /* Define uma largura máxima */
+}
+#sobre p {
+    max-width: 100%;  /* Define uma largura máxima para o texto */
+    font-size: 20px;
+    line-height: 1.8;  /* Espaçamento entre as linhas */
+    text-align: center;
+}
+#Objetivos p {
+    max-width: 100%;  /* Define uma largura máxima para o texto */
+    font-size: 20px;
+    line-height: 1.8;  /* Espaçamento entre as linhas */
+    text-align: center;
+}
+#Objetivos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Objetivos:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Adiciona um brilho ao redor */
+}
+
+#Objetivos h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#Objetivos:hover h2 {
+    color: #cbc5da; /* Muda a cor do título ao passar o mouse */
+}
+
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Adiciona um brilho ao redor */
+}
+
+#sobre h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#sobre:hover h2 {
+    color: #cbc5da; /* Muda a cor do título ao passar o mouse */
+}
+
